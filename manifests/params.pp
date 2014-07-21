@@ -71,14 +71,14 @@ class graphite::params {
       $python_dev_pkg = 'python-devel'
 
       # see https://github.com/graphite-project/carbon/issues/86
-      case $::operatingsystemrelease {
-        /^6\.\d+$/: {
+      case $::operatingsystemmajrelease {
+        6: {
           $carbin_pip_hack_source = "/usr/lib/python2.6/site-packages/carbon-${carbonVersion}-py2.6.egg-info"
           $carbin_pip_hack_target = "/opt/graphite/lib/carbon-${carbonVersion}-py2.6.egg-info"
           $gweb_pip_hack_source = "/usr/lib/python2.6/site-packages/graphite_web-${graphiteVersion}-py2.6.egg-info"
           $gweb_pip_hack_target = "/opt/graphite/webapp/graphite_web-${graphiteVersion}-py2.6.egg-info"
         }
-        /^7\.\d+$/: {
+        7: {
           $carbin_pip_hack_source = "/usr/lib/python2.7/site-packages/carbon-${carbonVersion}-py2.7.egg-info"
           $carbin_pip_hack_target = "/opt/graphite/lib/carbon-${carbonVersion}-py2.7.egg-info"
           $gweb_pip_hack_source = "/usr/lib/python2.7/site-packages/graphite_web-${graphiteVersion}-py2.7.egg-info"
