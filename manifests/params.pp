@@ -89,11 +89,9 @@ class graphite::params {
 
       $graphitepkgs = [
         'pycairo',
-        'Django14',
+        'python-Django15',
         'python-ldap',
         'python-memcached',
-        'python-sqlite2',
-        'bitmap',
         'bitmap-fonts-compat',
         'python-crypto',
         'pyOpenSSL',
